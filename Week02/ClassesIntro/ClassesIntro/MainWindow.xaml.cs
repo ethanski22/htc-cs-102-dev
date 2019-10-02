@@ -28,7 +28,9 @@ namespace ClassesIntro
         private void Bark_Button_Click(object sender, RoutedEventArgs e)
         {
             Dog dog = new Dog();
+            dog.Name = "bob";
             dog.Bark();
+            dog.SayName();
         }
 
         private void SayName_Button_Click(object sender, RoutedEventArgs e)
@@ -37,6 +39,16 @@ namespace ClassesIntro
 
             Dog dog = new Dog("Corgi", 12, dogName);
             //dog.SayName();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void NewDog_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Dog dog = new Dog();
+            dog.NewDog();
         }
     }
 }
