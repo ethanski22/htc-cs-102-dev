@@ -9,18 +9,22 @@ namespace movielist
 {
     public class movie
     {
-        public string title;
-        public int releaseyear;
-        public movie(string title, int releaseyear)
+
+        public string title { get; set; }
+        public string releasedate { get; set; }
+        public int rottentomatoes { get; set; }
+
+        public movie(string title, string releasedate, int rottentomatoes)
         {
-            //this means it goes to the public string and int to get the var
+            //this. means it goes to the public string and int to get the var
             this.title = title;
-            this.releaseyear = releaseyear;
+            this.releasedate = releasedate;
+            this.rottentomatoes = rottentomatoes;
 
         }
         public void showdetails()
         {
-            MessageBox.Show(title + " was released in " + releaseyear);
+            MessageBox.Show(title + " was released in " + releasedate);
         }
 
     }
