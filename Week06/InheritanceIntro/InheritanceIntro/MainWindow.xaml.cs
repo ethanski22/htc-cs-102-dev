@@ -25,12 +25,6 @@ namespace InheritanceIntro
             InitializeComponent();
         }
 
-        private void Bark_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Dog dog = new Dog();
-            dog.Bark();
-        }
-
         private void SayName_Button_Click(object sender, RoutedEventArgs e)
         {
             // Define a new List of dogs
@@ -47,8 +41,38 @@ namespace InheritanceIntro
             // Loop through the list and call a method on the objects
             foreach (Dog d in dogs)
             {
-                d.SayName();
+                d.sayname();
             }
+            duck duck1 = new InheritanceIntro.duck(9, "scrudge mcduck");
+            duck1.sayname();
+            frog frog1 = new InheritanceIntro.frog(3, "frogget");
+            frog1.sayname();
+            worm worm1 = new InheritanceIntro.worm(1, "greg");
+            worm1.sayname();
+        }
+
+         private void Bark_Button_Click(object sender, RoutedEventArgs e)
+         {
+            Dog dog = new Dog();
+            dog.Bark();
+         }
+
+        private void quackbutton_Click(object sender, RoutedEventArgs e)
+        {
+            duck duck = new duck();
+            duck.quack();
+        }
+
+        private void ribbitclick_Click(object sender, RoutedEventArgs e)
+        {
+            frog frog = new frog();
+            frog.ribbit();
+        }
+
+        private void vibrateclick_Click(object sender, RoutedEventArgs e)
+        {
+            worm worm = new worm();
+            worm.vibrate();
         }
     }
 }
